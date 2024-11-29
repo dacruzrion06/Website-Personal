@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solid_Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1c0033;
+            color: white;
+        }
+
+        header {
+            background-color: #ff4500;
+            padding: 15px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #ffdd57;
+        }
+
+        .item-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+        }
+
+        .item {
+            background-color: #3b0449;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .item:hover {
+            background-color: #571165;
+            transform: scale(1.05);
+        }
+
+        .item h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .price {
+            display: none; /* Hidden by default */
+        }
+
+        .price.active {
+            display: block; /* Show when active */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #ff4500;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Solid_Store</h1>
+    </header>
+    <div class="container">
+        <h2 class="section-title">Games</h2>
+        <div class="item-grid">
+            <div class="item" onclick="showPrices('pubg')">
+                <h3>PUBG Mobile</h3>
+            </div>
+            <div class="item" onclick="showPrices('freefire')">
+                <h3>Free Fire</h3>
+            </div>
+            <div class="item" onclick="showPrices('clashofclans')">
+                <h3>Clash of Clans</h3>
+            </div>
+            <div class="item" onclick="showPrices('genshinimpact')">
+                <h3>Genshin Impact</h3>
+            </div>
+            <div class="item" onclick="showPrices('efootball')">
+                <h3>eFootball</h3>
+            </div>
+            <div class="item" onclick="showPrices('mobilelegend')">
+                <h3>Mobile Legend</h3>
+            </div>
+        </div>
+        
+        <h2 class="section-title">Films</h2>
+        <div class="item-grid">
+            <div class="item" onclick="showPrices('netflix')">
+                <h3>Netflix</h3>
+            </div>
+            <div class="item" onclick="showPrices('disney')">
+                <h3>Disney+ Hotstar</h3>
+            </div>
+            <div class="item" onclick="showPrices('wetv')">
+                <h3>WeTV</h3>
+            </div>
+            <div class="item" onclick="showPrices('premier')">
+                <h3>Premier</h3>
+            </div>
+        </div>
+        <div id="price-pubg" class="price">
+            <h3>Harga PUBG Mobile</h3>
+            <p>30UC $0.50</p>
+            <button onclick="goToWhatsApp('PUBG Mobile')">Beli Sekarang</button>
+            <p>180UC $2.75</p>
+            <button onclick="goToWhatsApp('PUBG Mobile')">Beli Sekarang</button>
+            <p>300UC $4.50</p>
+            <button onclick="goToWhatsApp('PUBG Mobile')">Beli Sekarang</button>
+            <p>540UC $8.25</p>
+            <button onclick="goToWhatsApp('PUBG Mobile')">Beli Sekarang</button>
+            <p>660UC $10.00</p>
+            <button onclick="goToWhatsApp('PUBG Mobile')">Beli Sekarang</button>
+            <p>840 + 60UC $13.00</p>
+            <button onclick="goToWhatsApp('PUBG Mobile')">Beli Sekarang</button>
+            <p>1020 + 120UC $18.50</p>
+            <button onclick="goToWhatsApp('PUBG Mobile')">Beli Sekarang</button>
+            <p>1380 + 120UC $22.00</p>
+            <button onclick="goToWhatsApp('PUBG Mobile')">Beli Sekarang</button>
+            <p>1800 + 325UC $28.00</p>
+            <button onclick="goToWhatsApp('PUBG Mobile')">Beli Sekarang</button>
+            <p>More UC DM...</p>
+            <button onclick="goToWhatsApp('PUBG Mobile')">DM Sekarang</button>
+        </div>
+        <div id="price-freefire" class="price">
+            <h3>Harga Free Fire</h3>
+            <p>20 diamonds $0.25</p>
+            <button onclick="goToWhatsApp('Free Fire')">Beli Sekarang</button>
+            <p>70 diamonds $1.00</p>
+            <button onclick="goToWhatsApp('Free Fire')">Beli Sekarang</button>
+            <p>140 diamonds $1.50</p>
+            <button onclick="goToWhatsApp('Free Fire')">Beli Sekarang</button>
+            <p>355 diamonds $3.50</p>
+            <button onclick="goToWhatsApp('Free Fire')">Beli Sekarang</button>
+            <p>720 diamonds $7.00</p>
+            <button onclick="goToWhatsApp('Free Fire')">Beli Sekarang</button>
+            <p>7290 diamonds $65.0</p>
+            <button onclick="goToWhatsApp('Free Fire')">Beli Sekarang</button>
+            <p>More diamonds dm...</p>
+            <button onclick="goToWhatsApp('Free Fire')">DM Sekarang</button>
+        </div>
+        <div id="price-clashofclans" class="price">
+            <h3>Harga Clash of Clans</h3>
+            <p>Gold Pass $7.00</p>
+            <button onclick="goToWhatsApp('Clash of Clans')">Beli Sekarang</button>
+            <p>500 Gems $5.00</p>
+            <button onclick="goToWhatsApp('Clash of Clans')">Beli Sekarang</button>
+            <p>1200 Gems $9.00</p>
+            <button onclick="goToWhatsApp('Clash of Clans')">Beli Sekarang</button>
+            <p>2500 Gems $18.00</p>
+            <button onclick="goToWhatsApp('Clash of Clans')">Beli Sekarang</button>
+            <p>6500 Gems $45.00</p>
+            <button onclick="goToWhatsApp('Clash of Clans')">Beli Sekarang</button>
+            <p>14000 Gems $90.00</p>
+            <button onclick="goToWhatsApp('Clash of Clans')">Beli Sekarang</button>
+        </div>
+        <div id="price-genshinimpact" class="price">
+            <h3>Harga Genshin Impact</h3>
+            <p>60 Genesis Crystals $1.00</p>
+            <button onclick="goToWhatsApp('Genshin Impact')">Beli Sekarang</button>
+            <p>300 + 30 Genesis Crystals $4.50</p>
+            <button onclick="goToWhatsApp('Genshin Impact')">Beli Sekarang</button>
+            <p>980 + 260 Genesis Crystals $27.00</p>
+            <button onclick="goToWhatsApp('Genshin Impact')">Beli Sekarang</button>
+            <p>328 + 600 Genesis Crystals $43.00</p>
+            <button onclick="goToWhatsApp('Genshin Impact')">Beli Sekarang</button>
+            <p>648 + 1600 Genesis Crystals $84.00</p>
+            <button onclick="goToWhatsApp('Genshin Impact')">Beli Sekarang</button>
+        </div>
+        <div id="price-efootball" class="price">
+            <h3>Harga eFootball</h3>
+            <p>530 Coins $5.00</p>
+            <button onclick="goToWhatsApp('eFootball')">Beli Sekarang</button>
+            <p>750 Coins $8.50</p>
+            <button onclick="goToWhatsApp('eFootball')">Beli Sekarang</button>
+            <p>1040 Coins $9.50</p>
+            <button onclick="goToWhatsApp('eFootball')">Beli Sekarang</button>
+            <p>2130 Coins $19.00</p>
+            <button onclick="goToWhatsApp('eFootball')">Beli Sekarang</button>
+            <p>3250 Coins $28.00</p>
+            <button onclick="goToWhatsApp('eFootball')">Beli Sekarang</button>
+            <p>5700 Coins $45.00</p>
+            <button onclick="goToWhatsApp('eFootball')">Beli Sekarang</button>
+            <p>12800 Coins $94.00</p>
+            <button onclick="goToWhatsApp('eFootball')">Beli Sekarang</button>
+        </div>
+        <div id="price-mobilelegend" class="price">
+            <h3>Harga Mobile Legend</h3>
+            <p>54 diamonds $1.00</p>
+            <button onclick="goToWhatsApp('Mobile Legend')">Beli Sekarang</button>
+            <p>113 diamonds $2.25</p>
+            <button onclick="goToWhatsApp('Mobile Legend')">Beli Sekarang</button>
+            <p>170 diamonds $3.50</p>
+            <button onclick="goToWhatsApp('Mobile Legend')">Beli Sekarang</button>
+            <p>258 diamonds $5.00</p>
+            <button onclick="goToWhatsApp('Mobile Legend')">Beli Sekarang</button>
+            <p>568 diamonds $11.00</p>
+            <button onclick="goToWhatsApp('Mobile Legend')">Beli Sekarang</button>
+            <p>716 diamonds $16.00</p>
+            <button onclick="goToWhatsApp('Mobile Legend')">Beli Sekarang</button>
+            <p>938 diamonds $19.00</p>
+            <button onclick="goToWhatsApp('Mobile Legend')">Beli Sekarang</button>
+            <p>1506 diamonds $25.00</p>
+            <button onclick="goToWhatsApp('Mobile Legend')">Beli Sekarang</button>
+            <p>2232 diamonds $45.00</p>
+            <button onclick="goToWhatsApp('Mobile Legend')">Beli Sekarang</button>
+            <p>3738 diamonds $70.00</p>
+            <button onclick="goToWhatsApp('Mobile Legend')">Beli Sekarang</button>
+            <p>More diamond dm...</p>
+            <button onclick="goToWhatsApp('Mobile Legend')">DM Sekarang</button>
+        </div>
+        <div id="price-netflix" class="price">
+            <h3>Harga Netflix</h3>
+            <p>Private 1 Month $8.00</p>
+            <button onclick="goToWhatsApp('Netflix')">Beli Sekarang</button>
+            <p>Sharing 1 Month $2.00</p>
+            <button onclick="goToWhatsApp('Netflix')">Beli Sekarang</button>
+        </div>
+        <div id="price-disney" class="price">
+            <h3>Harga Disney+ Hotstar</h3>
+            <p>Private 1 Month $9.00</p>
+            <button onclick="goToWhatsApp('Disney+ Hotstar')">Beli Sekarang</button>
+        </div>
+        <div id="price-wetv" class="price">
+            <h3>Harga WeTV</h3>
+            <p>VIP 1 Month $3.00</p>
+            <button onclick="goToWhatsApp('WeTV')">Beli Sekarang</button>
+            <p>VIP 3 Months $8.00</p>
+            <button onclick="goToWhatsApp('WeTV')">Beli Sekarang</button>
+            <p>VIP 1 Yaer $35.000</p>
+            <button onclick="goToWhatsApp('WeTV')">Beli Sekarang</button>
+        </div>
+        <div id="price-premier" class="price">
+            <h3>Harga Premier</h3>
+            <p>Sharing 1 Month $6.00</p>
+            <button onclick="goToWhatsApp('Premier')">Beli Sekarang</button>
+            <p>Private 1 Month $10.00</p> 
+            <button onclick="goToWhatsApp('Premier')">Beli Sekarang</button>
+        </div>
+    </div>
+    <footer>
+        <p>Solid_Store &copy; 2024</p>
+    </footer>
+    <script>
+        function showPrices(item) {
+            var priceDivs = document.querySelectorAll('.price');
+            priceDivs.forEach(function(div) {
+                div.classList.remove('active');
+            });
+            document.getElementById('price-' + item).classList.add('active');
+        }
+
+        function goToWhatsApp(product) {
+            var phoneNumber = " 74247406 "; // Ganti dengan nomor WhatsApp Anda
+            var message = "Saya tertarik untuk membeli " + product + "."; // Pesan yang akan dikirim
+            var url = "https://wa.me/" + 74247406 + "?text=" + encodeURIComponent(message);
+            window.location.href = url;
+        }
+
+        document.querySelectorAll('.price button').forEach(function(button) {
+            button.addEventListener('click', function() {
+                var product = this.parentElement.id.replace('price-', '');
+                goToWhatsApp(product);
+            });
+        });
+    </script>
+</body>
+</html>
